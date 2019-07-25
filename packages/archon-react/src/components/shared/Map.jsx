@@ -19,7 +19,7 @@ class Map extends Component {
     if (!window.google) {
       var s = document.createElement('script');
       s.type = 'text/javascript';
-      s.src = `https://maps.google.com/maps/api/js?key=AIzaSyAdeZqPt4lhr881sXyQmjddULBWniFnp5c`;
+      s.src = `https://maps.google.com/maps/api/js?key=AIzaSyAdeZqPt4lhr881sXyQmjddULBWniFnp5c`; //todoajt update key and hide from client
       var x = document.getElementsByTagName('script')[0];
       x.parentNode.insertBefore(s, x);
       // Below is important.
