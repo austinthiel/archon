@@ -1,0 +1,8 @@
+TODO
+
+API:
+- HMR (requires webpack setup on express server)
+
+React:
+- Implement Redux
+- Implement SSR

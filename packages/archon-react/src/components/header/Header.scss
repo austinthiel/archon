@@ -1,0 +1,35 @@
+@import '../../scss/globals';
+
+.nav_bar {
+  background-color: rgb(39, 39, 39);
+}
+
+ul {
+  list-style-type: none;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  font-family: $open-sans;
+  font-size: 20px;
+
+  @include mq($until: phoneMax) {
+    font-size: 16px;
+  }
+
+  li {  
+    float: left;
+
+    a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 18px 20px;
+      text-decoration: none;
+  
+      &:hover {
+        background-color: #111;
+      }
+    }
+  }
+}

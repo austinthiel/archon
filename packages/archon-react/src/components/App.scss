@@ -1,0 +1,19 @@
+@import '../scss/globals';
+
+.container {
+  min-height: 100vh;
+  position: relative;
+
+  .body {
+    padding: 10px;
+    padding-bottom: 250px;   /* Height of the footer */
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    background: rgb(39, 39, 39);
+  }
+}

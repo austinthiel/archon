@@ -1,0 +1,21 @@
+@import '../../scss/globals';
+
+.title-1 {
+  font-family: $open-sans;
+  font-size: 46px;
+  font-weight: $bold;
+  margin: 10px 0;
+}
+
+.title-2 {
+  font-family: $open-sans;
+  font-size: 32px;
+  font-weight: $bold;
+  margin: 10px 0;
+}
+
+.body {
+  font-family: $open-sans;
+  font-size: 21px;
+  font-weight: $normal;
+}
