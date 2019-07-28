@@ -1,13 +1,13 @@
 @import '../../scss/globals';
 
-.title-1 {
+.title {
   font-family: $open-sans;
   font-size: 46px;
   font-weight: $bold;
   margin: 10px 0;
 }
 
-.title-2 {
+.subtitle {
   font-family: $open-sans;
   font-size: 32px;
   font-weight: $bold;
@@ -18,4 +18,11 @@
   font-family: $open-sans;
   font-size: 21px;
   font-weight: $normal;
+}
+
+.tag {
+  font-family: $open-sans;
+  font-size: 12px;
+  font-weight: $normal;
+  text-transform: uppercase;
 }

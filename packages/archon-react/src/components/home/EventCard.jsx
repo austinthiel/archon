@@ -3,7 +3,7 @@ import './EventCard.scss';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { Map, Title2 } from '../shared';
+import { Map, Text } from '../shared';
 
 export default class EventCard extends Component {
   static propTypes = {
@@ -16,12 +16,13 @@ export default class EventCard extends Component {
     const { title, description, locationCoordinates } = this.props;
 
     return (
+      // <div styleName='box' />
       <div styleName='card'>
         <div styleName='description'>
-          <Title2>{title}</Title2>
+          <Text type='subtitle'>{title}</Text>
           Description: {description}
         </div>
-        <div styleName='map'>
+        {/* <div styleName='map'>
           <Map
             id={this.props.id}
             options={{
@@ -36,7 +37,7 @@ export default class EventCard extends Component {
               });
             }}
           />
-        </div>
+        </div> */}
       </div>
     );
   }

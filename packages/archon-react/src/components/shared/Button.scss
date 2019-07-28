@@ -1,0 +1,25 @@
+.tester {
+  background-color: lightcoral;
+  color: white;
+  padding: 8px 10px;
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+
+  &:hover {
+    background-color: pink;
+  }
+}
+
+button {
+  border: none;
+  border-radius: 3px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

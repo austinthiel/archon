@@ -1,12 +1,12 @@
 import knex from 'knex';
 
 const connection = knex({
-  client: 'mysql',
+  client: 'postgres',
   connection: {
     host: 'localhost',
-    user: 'test_user',
-    password: 'TestPassword!1',
-    database: 'archon_development',
+    user: 'postgres',
+    password: 'unsafepasswordfortesting',
+    database: 'postgres',
   },
 });
 

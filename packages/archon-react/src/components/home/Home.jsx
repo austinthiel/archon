@@ -3,7 +3,7 @@ import './Home.scss';
 import React, { Component } from 'react';
 import rp from 'request-promise-native';
 
-import { Page, Title1 } from '../shared';
+import { Page, Text, Button } from '../shared';
 import EventCard from './EventCard.jsx';
 
 export default class Home extends Component {
@@ -50,7 +50,7 @@ export default class Home extends Component {
 
     return (
       <Page>
-        <Title1>Juggling Meetups</Title1>
+        <Text type='title'>Juggling Meetups</Text>
         <div style={{ textAlign: 'center' }}>
           Join our email list to get notified about impromptu juggling meetups
           in the city!
@@ -63,19 +63,20 @@ export default class Home extends Component {
               value={emailAddress}
             />
             <br />
-            <input type='submit' value='Join' />
+            <Button>Submit</Button>
           </form>
         </div>
         <EventCard
           id='mymap2'
           title='Circus Center'
-          description='meets every sunday from 5pm-8pm'
+          description='meets every Sunday from 5pm-8pm'
           locationCoordinates={{ lat: 37.7655, lng: -122.457 }}
         />
+
         <EventCard
           id='mymap1'
           title='Circus Connections'
-          description='meets every money from 7pm-10pm'
+          description='meets every Monday from 7pm-10pm'
           locationCoordinates={{ lat: 37.7655, lng: -122.457 }}
         />
       </Page>
