@@ -1,5 +1,3 @@
-@import '../../scss/globals';
-
 .card {
   border: 1px solid black;
   margin: 25px 0;
@@ -30,9 +28,9 @@
   }
 
 
-  @include mq($until: wideTabletMin) {
-    flex-direction: column;
-  }
+  // @include mq($until: wideTabletMin) {
+  //   flex-direction: column;
+  // }
 }
 
 .description {

@@ -7,7 +7,7 @@ const Button = props => {
   const { size, color, type, children, onClick } = props;
 
   return (
-    <button onClick={onClick} styleName='tester'>
+    <button onClick={onClick} styleName={`${size}_${color}_${type}`}>
       {children}
     </button>
   );

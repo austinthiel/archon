@@ -1,28 +1,26 @@
-@import '../../scss/globals';
-
 .title {
-  font-family: $open-sans;
+  font-family: 'ubuntu', sans-serif;
   font-size: 46px;
-  font-weight: $bold;
+  font-weight: 700;
   margin: 10px 0;
 }
 
 .subtitle {
-  font-family: $open-sans;
+  font-family: 'ubuntu', sans-serif;
   font-size: 32px;
-  font-weight: $bold;
+  font-weight: 700;
   margin: 10px 0;
 }
 
 .body {
-  font-family: $open-sans;
+  font-family: 'ubuntu', sans-serif;
   font-size: 21px;
-  font-weight: $normal;
+  font-weight: 400;
 }
 
 .tag {
-  font-family: $open-sans;
+  font-family: 'ubuntu', sans-serif;
   font-size: 12px;
-  font-weight: $normal;
+  font-weight: 400;
   text-transform: uppercase;
 }

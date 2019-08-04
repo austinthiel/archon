@@ -1,4 +1,4 @@
-.tester {
+.medium_red_filled {
   background-color: lightcoral;
   color: white;
   padding: 8px 10px;
@@ -11,15 +11,15 @@
   }
 }
 
-button {
-  border: none;
-  border-radius: 3px;
+.medium_blue_filled {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 8px 10px;
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
 
   &:hover {
-    cursor: pointer;
-  }
-
-  &:focus {
-    outline: 0;
+    background-color: skyblue;
   }
 }

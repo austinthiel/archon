@@ -3,7 +3,7 @@ import './Home.scss';
 import React, { Component } from 'react';
 import rp from 'request-promise-native';
 
-import { Page, Text, Button } from '../shared';
+import { Page, Text, Button, Spacer } from '../shared';
 import EventCard from './EventCard.jsx';
 
 export default class Home extends Component {
@@ -50,10 +50,12 @@ export default class Home extends Component {
 
     return (
       <Page>
-        <Text type='title'>Juggling Meetups</Text>
+        <Text type='header'>Juggling Meetups</Text>
         <div style={{ textAlign: 'center' }}>
-          Join our email list to get notified about impromptu juggling meetups
-          in the city!
+          <Text>
+            Join our email list to get notified about impromptu juggling meetups
+            in the city!
+          </Text>
           <br />
           <form onSubmit={this.handleSubmit}>
             <input
@@ -62,8 +64,8 @@ export default class Home extends Component {
               placeholder='email'
               value={emailAddress}
             />
-            <br />
-            <Button>Submit</Button>
+            <Spacer size='10' />
+            <Button color='blue'>Submit</Button>
           </form>
         </div>
         <EventCard

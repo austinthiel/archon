@@ -19,8 +19,8 @@ export default class EventCard extends Component {
       // <div styleName='box' />
       <div styleName='card'>
         <div styleName='description'>
-          <Text type='subtitle'>{title}</Text>
-          Description: {description}
+          <Text type='subheader'>{title}</Text>
+          <Text>Description: {description}</Text>
         </div>
         {/* <div styleName='map'>
           <Map
