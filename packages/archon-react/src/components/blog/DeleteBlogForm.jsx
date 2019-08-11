@@ -2,6 +2,8 @@ import rp from 'request-promise-native';
 
 import React, { Component } from 'react';
 
+import { Button } from '../../components/shared';
+
 export default class CreateBlogForm extends Component {
   constructor(props) {
     super(props);
@@ -49,7 +51,7 @@ export default class CreateBlogForm extends Component {
           <br />
           <input type='number' name='userId' onChange={this.handleChange} />
         </label>
-        <input type='submit' value='Delete User' />
+        <Button color='blue'>Delete User</Button>
       </form>
     );
   }

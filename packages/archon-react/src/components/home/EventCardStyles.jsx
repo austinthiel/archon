@@ -1,9 +1,11 @@
-.card {
+import { css } from '@emotion/core';
+
+export const card = css`
   border: 1px solid black;
   margin: 25px 0;
   border-radius: 3px;
   display: flex;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   transition: all 0.1s ease-in-out;
   position: relative;
 
@@ -23,12 +25,12 @@
     height: 100%;
     opacity: 0;
     border-radius: 3px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: opacity 0.1s ease-in-out;
   }
-}
+`;
 
-.description {
+export const description = css`
   flex: 1;
   padding: 25px;
-}
+`;

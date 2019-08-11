@@ -53,11 +53,13 @@ export default class Home extends Component {
         <EventCard
           title='Circus Center'
           description='Meets every Sunday from 5pm-8pm'
+          cost='Free'
         />
 
         <EventCard
           title='Circus Connections'
           description='Meets every Monday from 7pm-10pm'
+          cost='$5'
         />
 
         <Spacer size={40} />

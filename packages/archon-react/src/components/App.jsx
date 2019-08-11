@@ -13,28 +13,26 @@ import Blog from './blog/Blog';
 import Projects from './projects/Projects';
 import Contact from './contact/Contact';
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <div styleName='container'>
-          <Header />
+const App = () => {
+  return (
+    <Router>
+      <div styleName='container'>
+        <Header />
 
-          <div styleName='body'>
-            <Route path='/' exact component={Home} />
-            <Route path='/blog' exact component={Blog} />
-            <Route path='/projects' exact component={Projects} />
-            <Route path='/contact' exact component={Contact} />
-          </div>
-
-          <div styleName='footer'>
-            <Footer />
-          </div>
+        <div styleName='body'>
+          <Route path='/' exact component={Home} />
+          <Route path='/blog' exact component={Blog} />
+          <Route path='/projects' exact component={Projects} />
+          <Route path='/contact' exact component={Contact} />
         </div>
-      </Router>
-    );
-  }
-}
+
+        <div styleName='footer'>
+          <Footer />
+        </div>
+      </div>
+    </Router>
+  );
+};
 
 ReactDOM.render(<App />, document.getElementById('app'));
 

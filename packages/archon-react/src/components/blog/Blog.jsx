@@ -1,27 +1,24 @@
-import './Blog.scss';
+import React from 'react';
+import { Page, Spacer } from '../shared';
+import {
+  CreateBlogForm,
+  ReadBlogButton,
+  UpdateBlogForm,
+  DeleteBlogForm,
+} from './';
 
-import React, { Component } from 'react';
-import { Page } from '../shared';
-import CreateBlogForm from './CreateBlogForm';
-import ReadBlogButton from './ReadBlogButton';
-import UpdateBlogForm from './UpdateBlogForm';
-import DeleteBlogForm from './DeleteBlogForm';
+const Blog = () => {
+  return (
+    <Page>
+      <CreateBlogForm />
+      <Spacer size={20} />
+      <ReadBlogButton />
+      <Spacer size={20} />
+      <UpdateBlogForm />
+      <Spacer size={20} />
+      <DeleteBlogForm />
+    </Page>
+  );
+};
 
-export default class Blog extends Component {
-  render() {
-    return (
-      <Page>
-        <CreateBlogForm />
-        <br />
-        <br />
-        <ReadBlogButton />
-        <br />
-        <br />
-        <UpdateBlogForm />
-        <br />
-        <br />
-        <DeleteBlogForm />
-      </Page>
-    );
-  }
-}
+export default Blog;

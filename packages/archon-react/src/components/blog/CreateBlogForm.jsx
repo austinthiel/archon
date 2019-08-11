@@ -1,6 +1,7 @@
 import rp from 'request-promise-native';
 
 import React, { Component } from 'react';
+import { Button } from '../../components/shared';
 
 export default class CreateBlogForm extends Component {
   constructor(props) {
@@ -47,7 +48,7 @@ export default class CreateBlogForm extends Component {
           <br />
           <input type='text' name='username' onChange={this.handleChange} />
         </label>
-        <input type='submit' value='Create User' />
+        <Button color='blue'>Create User</Button>
       </form>
     );
   }

@@ -2,6 +2,8 @@ import rp from 'request-promise-native';
 
 import React, { Component } from 'react';
 
+import { Button } from '../../components/shared';
+
 export default class UpdateBlogForm extends Component {
   constructor(props) {
     super(props);
@@ -74,7 +76,7 @@ export default class UpdateBlogForm extends Component {
           />
         </label>
         <br />
-        <input type='submit' value='Update User' />
+        <Button color='blue'>Update User</Button>
       </form>
     );
   }

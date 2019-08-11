@@ -1,6 +1,7 @@
 import rp from 'request-promise-native';
 
 import React, { Component } from 'react';
+import { Button } from '../../components/shared';
 
 export default class CreateBlogForm extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ export default class CreateBlogForm extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.onClick}>Get All Users</button>
+        <Button onClick={this.onClick}>Get All Users</Button>
         {this.state.users.map(user => {
           return (
             <div key={user.id}>

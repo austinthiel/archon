@@ -1,4 +1,3 @@
-import './Text.scss';
 import { css } from '@emotion/core';
 import { fonts, colors } from '../../scss';
 

@@ -1,15 +1,22 @@
-import './Page.scss';
+import { css } from '@emotion/core';
 
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class Page extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-  };
+const container = css`
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 15px;
+  font-family: 'ubuntu', sans-serif;
+`;
 
-  render() {
-    const { children } = this.props;
-    return <div styleName='container'>{children}</div>;
-  }
-}
+const Page = props => {
+  const { children } = props;
+  return <div css={container}>{children}</div>;
+};
+
+Page.propTypes = {
+  children: PropTypes.node,
+};
+
+export default Page;

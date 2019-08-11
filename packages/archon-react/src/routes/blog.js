@@ -1,4 +1,4 @@
-import Blog from '../components/blog/Blog';
+import Blog from '../components/blog';
 
 const routes = [
   {
