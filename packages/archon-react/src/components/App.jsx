@@ -10,7 +10,7 @@ import Footer from './footer/Footer';
 
 import Home from './home/Home';
 import Blog from './blog/Blog';
-import Projects from './projects/Projects';
+import Gallery from './gallery/Gallery';
 import Contact from './contact/Contact';
 
 const App = () => {
@@ -22,7 +22,7 @@ const App = () => {
         <div styleName='body'>
           <Route path='/' exact component={Home} />
           <Route path='/blog' exact component={Blog} />
-          <Route path='/projects' exact component={Projects} />
+          <Route path='/gallery' exact component={Gallery} />
           <Route path='/contact' exact component={Contact} />
         </div>
 

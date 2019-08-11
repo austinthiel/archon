@@ -9,7 +9,7 @@ const colorMap = {
   white: colors.white,
 };
 
-export const Text = props => {
+const Text = props => {
   const { type, color, inline, children } = props;
 
   const header = css`
@@ -21,15 +21,15 @@ export const Text = props => {
 
   const subheader = css`
     font-family: ${fonts.primary};
-    font-weight: ${fonts.medium};
-    font-size: 32px;
+    font-weight: ${fonts.bold};
+    font-size: 25px;
     color: ${colorMap[color]};
   `;
 
   const body = css`
     font-family: ${fonts.primary};
     font-weight: ${fonts.regular};
-    font-size: 22px;
+    font-size: 17px;
     color: ${colorMap[color]};
   `;
 
@@ -64,3 +64,5 @@ Text.defaultProps = {
   color: 'black',
   inline: false,
 };
+
+export default Text;

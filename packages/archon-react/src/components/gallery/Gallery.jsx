@@ -1,12 +1,12 @@
 import React from 'react';
 import { Page } from '../shared';
 
-const Projects = () => {
+const Gallery = () => {
   return (
     <Page>
-      <div>projects</div>
+      <div>Gallery</div>
     </Page>
   );
 };
 
-export default Projects;
+export default Gallery;

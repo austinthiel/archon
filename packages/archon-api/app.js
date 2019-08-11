@@ -10,7 +10,7 @@ const sassMiddleware = require('node-sass-middleware');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const blogRouter = require('./routes/blog');
-const projectsRouter = require('./routes/projects');
+const galleryRouter = require('./routes/gallery');
 const contactRouter = require('./routes/contact');
 const mailingListRouter = require('./routes/mailingList');
 
@@ -46,7 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/blog', blogRouter);
-app.use('/projects', projectsRouter);
+app.use('/gallery', galleryRouter);
 app.use('/contact', contactRouter);
 app.use('/mailingList', mailingListRouter);
 

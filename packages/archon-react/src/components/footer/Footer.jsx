@@ -9,7 +9,7 @@ const Footer = () => {
       <div css={styles.footer}>
         <Text color='white' type='tag'>
           Made with 🤔 by{' '}
-          <Link href='https://github.com/austinthiel' newTab>
+          <Link href='http://austinthiel.com/' newTab>
             Austin Thiel
           </Link>
         </Text>
