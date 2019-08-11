@@ -2,9 +2,10 @@ import HtmlWebPackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack from 'webpack';
 
-module.exports = {
+export default {
   output: {
     filename: '[name].bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -53,11 +54,6 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
-    proxy: {
-      '/': {
-        target: 'http://localhost:4000',
-      },
-    },
     hot: true,
     compress: true,
     port: 3000,

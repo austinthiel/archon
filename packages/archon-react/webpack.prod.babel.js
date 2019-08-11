@@ -4,9 +4,10 @@ import CompressionPlugin from 'compression-webpack-plugin';
 import BrotliPlugin from 'brotli-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
-module.exports = {
+export default {
   output: {
     filename: '[name].bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -67,11 +68,6 @@ module.exports = {
     }),
   ],
   devServer: {
-    proxy: {
-      '/': {
-        target: 'http://localhost:4000',
-      },
-    },
     compress: true,
     port: 3000,
   },
