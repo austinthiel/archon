@@ -1,7 +1,5 @@
-import './Contact.scss';
-
 import React, { Component } from 'react';
-import { Page, Text } from '../shared';
+import { Page, Text, Link } from '../shared';
 
 export default class Contact extends Component {
   render() {
@@ -9,7 +7,7 @@ export default class Contact extends Component {
       <Page>
         <Text>
           For questions and inquiries, email{' '}
-          <a href='mailto:info@jugglesf.com'>info@jugglesf.com</a>.
+          <Link href='mailto:info@jugglesf.com'>info@jugglesf.com</Link>.
         </Text>
       </Page>
     );

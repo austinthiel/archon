@@ -1,5 +1,3 @@
-import './Projects.scss';
-
 import React, { Component } from 'react';
 import { Page } from '../shared';
 

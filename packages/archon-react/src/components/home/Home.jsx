@@ -1,5 +1,3 @@
-import './Home.scss';
-
 import React, { Component } from 'react';
 import rp from 'request-promise-native';
 
