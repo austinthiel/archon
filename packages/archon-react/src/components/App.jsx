@@ -5,13 +5,13 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Header from './header/Header.jsx';
-import Footer from './footer/Footer.jsx';
+import Header from './header/Header';
+import Footer from './footer/Footer';
 
-import Home from './home/Home.jsx';
-import Blog from './blog/Blog.jsx';
-import Projects from './projects/Projects.jsx';
-import Contact from './contact/Contact.jsx';
+import Home from './home/Home';
+import Blog from './blog/Blog';
+import Projects from './projects/Projects';
+import Contact from './contact/Contact';
 
 class App extends Component {
   render() {

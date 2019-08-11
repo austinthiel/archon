@@ -37,7 +37,7 @@ export const Text = props => {
   const tag = css`
     font-family: ${fonts.primary};
     font-weight: ${fonts.regular};
-    font-size: 12px;
+    font-size: 14px;
     color: ${colorMap[color]};
   `;
 
@@ -54,8 +54,8 @@ export const Text = props => {
 };
 
 Text.propTypes = {
-  type: PropTypes.oneOf(['title', 'subtitle', 'body', 'tag']),
-  children: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['header', 'subheader', 'body', 'tag']),
+  children: PropTypes.node.isRequired,
   color: PropTypes.oneOf(['black', 'white']),
   inline: PropTypes.bool,
 };

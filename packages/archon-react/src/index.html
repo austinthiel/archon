@@ -6,12 +6,32 @@
       <style>
         @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
       </style>
+      <style type='text/css'>
+        .loader:empty {
+          position: absolute;
+          top: calc(50% - 4em);
+          left: calc(50% - 4em);
+          width: 6em;
+          height: 6em;
+          border: 1.1em solid rgba(0, 0, 0, 0.2);
+          border-left: 1.1em solid #000000;
+          border-radius: 50%;
+          animation: load8 1.1s infinite linear;
+        }
+
+        @keyframes load8 {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      </style>
   </head>
   <body style='margin:0'>
       <div class='container'>
-        <div id='app'>
-          <!-- Render App.js -->
-        </div>
+        <div id='app' class='loader'></div>
       </div>
   </body>
 </html>

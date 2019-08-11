@@ -1,4 +1,4 @@
-import Blog from '../components/blog/Blog.jsx';
+import Blog from '../components/blog/Blog';
 
 const routes = [
   {

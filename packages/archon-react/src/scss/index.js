@@ -1,2 +1,2 @@
-export * as fonts from './fonts.jsx';
-export * as colors from './colors.jsx';
+export * as fonts from './fonts';
+export * as colors from './colors';

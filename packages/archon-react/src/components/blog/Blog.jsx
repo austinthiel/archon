@@ -2,10 +2,10 @@ import './Blog.scss';
 
 import React, { Component } from 'react';
 import { Page } from '../shared';
-import CreateBlogForm from './CreateBlogForm.jsx';
-import ReadBlogButton from './ReadBlogButton.jsx';
-import UpdateBlogForm from './UpdateBlogForm.jsx';
-import DeleteBlogForm from './DeleteBlogForm.jsx';
+import CreateBlogForm from './CreateBlogForm';
+import ReadBlogButton from './ReadBlogButton';
+import UpdateBlogForm from './UpdateBlogForm';
+import DeleteBlogForm from './DeleteBlogForm';
 
 export default class Blog extends Component {
   render() {

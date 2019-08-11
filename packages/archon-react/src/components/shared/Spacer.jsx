@@ -1,4 +1,4 @@
-import './Spacer.scss';
+import { css } from '@emotion/core';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -6,11 +6,17 @@ import PropTypes from 'prop-types';
 const Spacer = props => {
   const { size } = props;
 
-  return <div styleName={`size_${size}`} />;
+  return (
+    <div
+      css={css`
+        padding-top: ${size}px;
+      `}
+    />
+  );
 };
 
 Spacer.propTypes = {
-  size: PropTypes.oneOf(['10', '20']).isRequired,
+  size: PropTypes.number,
 };
 
 export default Spacer;

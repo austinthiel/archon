@@ -8,9 +8,8 @@ export default class Contact extends Component {
     return (
       <Page>
         <Text>
-          I can be reached via email at{' '}
-          <a href='mailto:hello@austinthiel.com'>hello@austinthiel.com</a>. I do
-          my best to respond to everyone!
+          For questions and inquiries, email{' '}
+          <a href='mailto:info@jugglesf.com'>info@jugglesf.com</a>.
         </Text>
       </Page>
     );
