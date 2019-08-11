@@ -11,7 +11,7 @@ export async function createBlog(req, res) {
 }
 
 export async function getBlog(req, res) {
-  const users = (await db.raw(`SELECT * FROM users;`))[0];
+  const users = (await db.raw(`SELECT * FROM users;`)).rows;
 
   res.send(users);
 }

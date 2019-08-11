@@ -54,6 +54,12 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:4000',
+        pathRewrite: { '^/api': '' },
+      },
+    },
     hot: true,
     compress: true,
     port: 3000,

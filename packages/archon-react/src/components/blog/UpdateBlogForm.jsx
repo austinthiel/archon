@@ -10,25 +10,21 @@ export default class UpdateBlogForm extends Component {
       idFieldValue: null,
       newUsernameFieldValue: '',
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleIdChange = this.handleIdChange.bind(this);
-    this.handleNewUsernameChange = this.handleNewUsernameChange.bind(this);
-    this.clearForm = this.clearForm.bind(this);
   }
 
-  handleIdChange(e) {
+  handleIdChange = e => {
     this.setState({
       idFieldValue: e.target.value,
     });
-  }
+  };
 
-  handleNewUsernameChange(e) {
+  handleNewUsernameChange = e => {
     this.setState({
       newUsernameFieldValue: e.target.value,
     });
-  }
+  };
 
-  async handleSubmit(e) {
+  handleSubmit = async e => {
     e.preventDefault();
 
     if (
@@ -39,7 +35,7 @@ export default class UpdateBlogForm extends Component {
     }
 
     const options = {
-      uri: 'http://localhost:3000/blog',
+      uri: 'http://localhost:3000/api/blog',
       json: true,
       body: {
         id: this.state.idFieldValue,
@@ -50,16 +46,16 @@ export default class UpdateBlogForm extends Component {
     await rp.put(options);
 
     this.clearForm();
-  }
+  };
 
-  clearForm() {
+  clearForm = () => {
     this.setState({
       idFieldValue: '',
       newUsernameFieldValue: '',
     });
 
     document.getElementById('updateForm').reset();
-  }
+  };
 
   render() {
     return (

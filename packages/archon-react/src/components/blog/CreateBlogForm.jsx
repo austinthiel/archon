@@ -9,22 +9,19 @@ export default class CreateBlogForm extends Component {
     this.state = {
       usernameFieldValue: '',
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.clearForm = this.clearForm.bind(this);
   }
 
-  handleChange(e) {
+  handleChange = e => {
     this.setState({
       usernameFieldValue: e.target.value,
     });
-  }
+  };
 
-  async handleSubmit(e) {
+  handleSubmit = async e => {
     e.preventDefault();
 
     const options = {
-      uri: 'http://localhost:3000/blog',
+      uri: 'http://localhost:3000/api/blog',
       json: true,
       body: {
         username: this.state.usernameFieldValue,
@@ -34,13 +31,13 @@ export default class CreateBlogForm extends Component {
     await rp.post(options);
 
     this.clearForm();
-  }
+  };
 
-  clearForm() {
+  clearForm = () => {
     this.setState({
       usernameFieldValue: '',
     });
-  }
+  };
 
   render() {
     return (

@@ -9,22 +9,19 @@ export default class CreateBlogForm extends Component {
     this.state = {
       userIdFieldValue: '',
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.clearForm = this.clearForm.bind(this);
   }
 
-  handleChange(e) {
+  handleChange = e => {
     this.setState({
       userIdFieldValue: e.target.value,
     });
-  }
+  };
 
-  async handleSubmit(e) {
+  handleSubmit = async e => {
     e.preventDefault();
 
     const options = {
-      uri: 'http://localhost:3000/blog',
+      uri: 'http://localhost:3000/api/blog',
       json: true,
       body: {
         id: this.state.userIdFieldValue,
@@ -34,15 +31,15 @@ export default class CreateBlogForm extends Component {
     await rp.delete(options);
 
     this.clearForm();
-  }
+  };
 
-  clearForm() {
+  clearForm = () => {
     this.setState({
       userIdFieldValue: '',
     });
 
     document.getElementById('deleteForm').reset();
-  }
+  };
 
   render() {
     return (

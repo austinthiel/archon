@@ -68,6 +68,12 @@ export default {
     }),
   ],
   devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:4000',
+        pathRewrite: { '^/api': '' },
+      },
+    },
     compress: true,
     port: 3000,
     historyApiFallback: true,

@@ -27,7 +27,7 @@ export default class Home extends Component {
     const { emailAddress } = this.state;
 
     const options = {
-      uri: 'http://localhost:3000/mailingList/subscribe',
+      uri: 'http://localhost:3000/api/mailingList/subscribe',
       json: true,
       body: {
         emailAddress,
@@ -53,13 +53,11 @@ export default class Home extends Component {
         <Text type='header'>Juggling Meetups</Text>
         <Spacer size={20} />
         <EventCard
-          id='mymap2'
           title='Circus Center'
           description='Meets every Sunday from 5pm-8pm'
         />
 
         <EventCard
-          id='mymap1'
           title='Circus Connections'
           description='Meets every Monday from 7pm-10pm'
         />

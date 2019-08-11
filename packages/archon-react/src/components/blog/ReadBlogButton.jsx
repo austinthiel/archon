@@ -9,15 +9,13 @@ export default class CreateBlogForm extends Component {
     this.state = {
       users: [],
     };
-
-    this.onClick = this.onClick.bind(this);
   }
 
-  async onClick(e) {
+  onClick = async e => {
     e.preventDefault();
 
     const options = {
-      uri: 'http://localhost:3000/blog',
+      uri: 'http://localhost:3000/api/blog',
       json: true,
     };
 
@@ -26,7 +24,7 @@ export default class CreateBlogForm extends Component {
     this.setState({
       users,
     });
-  }
+  };
 
   render() {
     return (
