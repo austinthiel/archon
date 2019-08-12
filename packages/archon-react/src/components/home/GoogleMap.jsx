@@ -8,7 +8,7 @@ const GoogleMap = props => {
 
   useEffect(() => {
     const googleMapScript = document.createElement('script');
-    googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDRW8j77JHIfsgSBRZv68Iax9b_-DZVhwg&libraries=places`;
+    googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=KEY&libraries=places`;
     window.document.body.appendChild(googleMapScript);
 
     googleMapScript.addEventListener('load', () => {
