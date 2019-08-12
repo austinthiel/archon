@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const container = css`
-  max-width: 800px;
+  max-width: 1000px;
   margin: 60px auto;
   padding: 0 15px;
   font-family: 'ubuntu', sans-serif;

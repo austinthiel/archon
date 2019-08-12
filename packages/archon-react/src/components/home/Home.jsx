@@ -3,6 +3,7 @@ import rp from 'request-promise-native';
 
 import { Page, Text, Button, Spacer } from '../shared';
 import EventCard from './EventCard';
+import GoogleMap from './GoogleMap';
 
 export default class Home extends Component {
   constructor(props) {
@@ -50,6 +51,7 @@ export default class Home extends Component {
       <Page>
         <Text type='header'>Juggling Meetups</Text>
         <Spacer size={20} />
+        <GoogleMap />
         <EventCard
           title='Circus Center'
           description='Meets every Sunday from 5pm-8pm'
