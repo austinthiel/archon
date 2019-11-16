@@ -1,89 +1,50 @@
-import React, { Component } from 'react';
-import rp from 'request-promise-native';
+import React, { useState } from 'react';
+import Header from '../header/Header';
 
-import { Page, Text, Button, Spacer } from '../shared';
-import EventCard from './EventCard';
-import GoogleMap from './GoogleMap';
+import { FlexContainer } from '../shared';
+import StreamPanel from './StreamPanel';
+import ChatPanel from './ChatPanel';
 
-export default class Home extends Component {
-  constructor(props) {
-    super(props);
+import * as styles from './HomeStyles';
 
-    this.state = {
-      emailAddress: '',
-    };
-  }
+const Home = () => {
+  const [chatSide, setChatSide] = useState('right');
+  const [chatClosed, setChatClosed] = useState(false);
 
-  handleChange = e => {
-    this.setState({
-      emailAddress: e.target.value,
-    });
+  const switchChatSide = () => {
+    setChatSide(chatSide === 'left' ? 'right' : 'left');
   };
 
-  handleSubmit = async e => {
-    e.preventDefault();
-
-    const { emailAddress } = this.state;
-
-    const options = {
-      uri: 'http://localhost:3000/api/mailingList/subscribe',
-      json: true,
-      body: {
-        emailAddress,
-      },
-    };
-
-    await rp.post(options);
-
-    this.clearForm();
+  const closeChat = () => {
+    setChatClosed(true);
   };
 
-  clearForm = () => {
-    this.setState({
-      emailAddress: '',
-    });
-  };
+  const streamPanel = <StreamPanel key='stream-panel' />;
+  const chatPanel = chatClosed ? null : (
+    <ChatPanel switchChatSide={switchChatSide} closeChat={closeChat} />
+  );
 
-  render() {
-    const { emailAddress } = this.state;
+  return (
+    <div css={styles.container}>
+      <FlexContainer flexDirection='column'>
+        <Header />
 
-    return (
-      <Page>
-        <Text type='header'>Juggling Meetups</Text>
-        <Spacer size={20} />
-        <GoogleMap />
-        <EventCard
-          title='Circus Center'
-          description='Meets every Sunday from 5pm-8pm'
-          cost='Free'
-        />
+        <FlexContainer style={styles.streamWrapper}>
+          {chatSide === 'right' ? (
+            <>
+              {streamPanel}
+              {chatPanel}
+            </>
+          ) : (
+            <>
+              {chatPanel}
+              {streamPanel}
+            </>
+          )}
+        </FlexContainer>
+      </FlexContainer>
+    </div>
+  );
+};
 
-        <EventCard
-          title='Circus Connections'
-          description='Meets every Monday from 7pm-10pm'
-          cost='$5'
-        />
-
-        <Spacer size={40} />
-
-        <div style={{ textAlign: 'center' }}>
-          <Text>
-            Join our email list to get notified about impromptu juggling meetups
-            in the city!
-          </Text>
-          <br />
-          <form onSubmit={this.handleSubmit}>
-            <input
-              type='text'
-              onChange={this.handleChange}
-              placeholder='email'
-              value={emailAddress}
-            />
-            <Spacer size={10} />
-            <Button color='blue'>Submit</Button>
-          </form>
-        </div>
-      </Page>
-    );
-  }
-}
+export default Home;

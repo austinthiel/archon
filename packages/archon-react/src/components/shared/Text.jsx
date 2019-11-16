@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { fonts, colors } from '../../scss';
+import { fonts, colors } from '../../styleDefinitions';
 
 import React from 'react';
 import PropTypes from 'prop-types';

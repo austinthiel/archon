@@ -20,25 +20,6 @@ export default {
         test: /\.html$/,
         use: ['html-loader'],
       },
-      {
-        test: /\.scss$/,
-        use: [
-          // create style nodes from js strings
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          // translates css into commonjs
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              localIdentName: '[name]__[local]--[hash:base64:5]',
-            },
-          },
-          // compiles sass to css, using node sass by default
-          'sass-loader',
-        ],
-      },
     ],
   },
   plugins: [

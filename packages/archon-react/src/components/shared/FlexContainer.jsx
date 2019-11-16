@@ -17,9 +17,11 @@ const FlexContainer = props => {
     flexDirection,
     alignContent,
     flexWrap,
+    style,
   } = props;
 
   const flexStyle = css`
+    ${style};
     display: flex;
     ${alignItems && `align-items: ${toKebabCase(alignItems)};`}
     ${justifyContent && `justify-content: ${toKebabCase(justifyContent)};`}
@@ -62,6 +64,7 @@ FlexContainer.propTypes = {
     'spaceAround',
   ]),
   flexWrap: PropTypes.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
+  style: PropTypes.object,
 };
 
 export default FlexContainer;

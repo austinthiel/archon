@@ -15,7 +15,7 @@ const HorizontalSpacer = props => {
 };
 
 HorizontalSpacer.propTypes = {
-  size: PropTypes.number.isRequired,
+  size: PropTypes.string.isRequired,
 };
 
 export default HorizontalSpacer;

@@ -1,35 +1,23 @@
-import './App.scss';
-
 import { hot } from 'react-hot-loader/root';
-import React, { Component } from 'react';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import rootReducer from '../reducers';
 
-import Header from './header/Header';
-import Footer from './footer/Footer';
-
-import Home from './home/Home';
-import Blog from './blog/Blog';
-import Gallery from './gallery/Gallery';
-import Contact from './contact/Contact';
+import Home from '../components/home/Home';
+import ModalRoot from '../components/modal/ModalRoot';
 
 const App = () => {
+  const store = createStore(rootReducer);
+
   return (
     <Router>
-      <div styleName='container'>
-        <Header />
-
-        <div styleName='body'>
-          <Route path='/' exact component={Home} />
-          <Route path='/blog' exact component={Blog} />
-          <Route path='/gallery' exact component={Gallery} />
-          <Route path='/contact' exact component={Contact} />
-        </div>
-
-        <div styleName='footer'>
-          <Footer />
-        </div>
-      </div>
+      <Provider store={store}>
+        <Route path='/' component={Home} />
+        <ModalRoot />
+      </Provider>
     </Router>
   );
 };

@@ -1,10 +1,10 @@
-import Blog from '../components/blog';
+import Events from '../components/events';
 
 const routes = [
   {
     path: '/',
     exact: true,
-    component: Blog,
+    component: Events,
   },
 ];
 

@@ -5,3 +5,5 @@ export { default as Spacer } from './Spacer';
 export { default as Link } from './Link';
 export { default as FlexContainer } from './FlexContainer';
 export { default as HorizontalSpacer } from './HorizontalSpacer';
+export { default as FlexItem } from './FlexItem';
+export { default as FlexSpacer } from './FlexSpacer';

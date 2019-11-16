@@ -16,7 +16,7 @@ const Spacer = props => {
 };
 
 Spacer.propTypes = {
-  size: PropTypes.number,
+  size: PropTypes.string.isRequired,
 };
 
 export default Spacer;
