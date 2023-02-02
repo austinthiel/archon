@@ -65,7 +65,7 @@
     "babel-plugin-react-css-modules": "^5.2.6",
     "core-js": "^2.6.9",
     "formik": "^2.0.3",
-    "npm": "^6.13.0",
+    "npm": "^9.4.1",
     "react-google-maps": "^9.4.5",
     "react-hot-loader": "^4.8.8",
     "react-modal": "^3.11.1",
